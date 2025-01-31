@@ -15,7 +15,7 @@ async function handleVolunteerSignin(req,res){
             const token = createTokenForUser(user);
            res.cookie("token", token, {
             httpOnly: true, // Prevents access from JavaScript (XSS protection)
-            secure: false, // Set to `true` in production (requires HTTPS)
+            secure: true, // Set to `true` in production (requires HTTPS)
             sameSite: "None", // Needed for cross-origin cookies
           });
             return res.status(200).json({msg:"Login successful"});
