@@ -19,7 +19,7 @@ const Signup = () => {
 
     try {
       // Make the POST request using Axios
-      const response = await axios.post('http://localhost:8000/api/auth/register/volunteer', formData);
+      const response = await axios.post('https://volunteerlink-deployment-2.onrender.com/api/auth/register/volunteer', formData);
 
       if (response.status === 200) {
         console.log('Registration Successful');
