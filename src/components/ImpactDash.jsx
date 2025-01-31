@@ -17,7 +17,7 @@ const ImpactDash = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/volunteer/impact-dash/${volunteerId}`)
+      .get(`https://volunteerlink-deployment-2.onrender.com/api/volunteer/impact-dash/${volunteerId}`)
       .then((response) => {
         setData({
           tasksCompleted: response.data.tasksCompleted,
