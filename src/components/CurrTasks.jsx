@@ -9,7 +9,7 @@ const CurrTasks = () => {
     const fetchTasks = async () => {
       try {
         const response = await axios.get(
-          `https://volunteerlink-deployment-2.onrender.com/api/tasks/accepted/${volunteerId}`
+          `https://volunteerlink-deployment-1.onrender.com/api/tasks/accepted/${volunteerId}`
         );
         setTasks(response.data.tasks);
       } catch (error) {
