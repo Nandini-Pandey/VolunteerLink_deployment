@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.resolve("./public")));
 app.use(
     cors({
-      origin: "http://localhost:5173", // Your frontend URL
+      origin: "https://volunteer-link-deployment.vercel.app/", // Your frontend URL
       credentials: true, // Allow cookies to be sent
     })
   );
