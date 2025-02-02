@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ChatWindow from "./ChatWindow"; 
 
-const URL = "https://volunteerlink-deployment-1.onrender.com/"
+const URL = "https://volunteerlink-deployment-1.onrender.com"
 
 const CurrTasks = () => {
   const volunteerId = "679c891df9bf773da95df622";
