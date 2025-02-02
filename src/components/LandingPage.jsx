@@ -264,9 +264,13 @@ const LandingPage = () => {
                 },
                 {
                   question: "Are NGOs verified?",
-                  answer:
-                    "Yes, all NGOs on VolunteerLink are verified by cross-checking their credentials with the NGO Darpan portal, which is managed by the Ministry of Electronics and Information Technology (MeitY) to ensure authenticity and compliance with government regulations. For further verification, you can visit the official NGO Darpan directory <a href="https://ngodarpan.gov.in/index.php/home/statewise_ngo/4370/7/16">NGO Darpan directory</a>
-.",
+                 answer: (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `Yes, all NGOs on VolunteerLink are verified by cross-checking their credentials with the NGO Darpan portal, which is managed by the Ministry of Electronics and Information Technology (MeitY) to ensure authenticity and compliance with government regulations. For further verification, you can visit the official <a href="https://ngodarpan.gov.in/index.php/home/statewise_ngo/4370/7/16">NGO Darpan directory</a>.`,
+      }}
+    />
+  ),
                 },
               ].map((faq, index) => (
                 <Accordion key={index}>
