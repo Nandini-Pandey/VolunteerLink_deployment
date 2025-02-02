@@ -32,45 +32,106 @@ function NGOWrapper() {
           <NGODashboard />
         </Box>
 
-        {/* Sidebar Drawer */}
-        <Drawer 
-          anchor="right" 
-          open={isSidebarOpen} 
-          onClose={toggleSidebar} 
-          PaperProps={{ sx: { width: 300, padding: 2 } }}>
-          <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: 2 }}>
-            NGO Profile
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText primary="Name: Helping Hands Foundation" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Mission: Empowering underprivileged children through education and healthcare." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Team Size: 25 Members" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Volunteer Needs:" />
-            </ListItem>
-            <List sx={{ paddingLeft: 2 }}>
-              <ListItem><ListItemText primary="- Teaching & Mentorship" /></ListItem>
-              <ListItem><ListItemText primary="- Event Planning & Coordination" /></ListItem>
-              <ListItem><ListItemText primary="- Fundraising & Grant Writing" /></ListItem>
-            </List>
-            <ListItem>
-              <ListItemText primary="Verified NGO: ✅ Yes" />
-            </ListItem>
-          </List>
-          <Button 
-            variant="contained" 
-            color="primary" 
-            fullWidth 
-            sx={{ marginTop: 2 }}>
-            Update Profile
-          </Button>
-        </Drawer>
+ {/* Sidebar Drawer */}
+<Drawer 
+  anchor="right" 
+  open={isSidebarOpen} 
+  onClose={toggleSidebar} 
+  PaperProps={{ sx: { width: 350, padding: 3, backgroundColor: "#f5f5f5", borderRadius: "10px" } }}>
+  
+  {/* Sidebar Header */}
+  <Box sx={{ textAlign: "center", marginBottom: 3 }}>
+    <Typography variant="h6" sx={{ fontWeight: "bold", color: "#333", mb: 2 }}>
+      NGO Profile
+    </Typography>
+    <Typography variant="body2" sx={{ fontStyle: "italic", color: "#666" }}>
+      Helping Hands Foundation
+    </Typography>
+  </Box>
+
+  {/* NGO Details */}
+  <List>
+    {/* Name Card (Green) */}
+    <ListItem sx={{ mb: 2 }}>
+      <Box sx={{ 
+        width: "100%", 
+        padding: 2, 
+        backgroundColor: "#c8e6c9", 
+        borderRadius: 2, 
+        boxShadow: 2 }}>
+        <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Name:</Typography>
+        <Typography variant="body2" sx={{ color: "#333" }}>Helping Hands Foundation</Typography>
+      </Box>
+    </ListItem>
+
+    {/* Mission Card (Yellow) */}
+    <ListItem sx={{ mb: 2 }}>
+      <Box sx={{ 
+        width: "100%", 
+        padding: 2, 
+        backgroundColor: "#fff9c4", 
+        borderRadius: 2, 
+        boxShadow: 2 }}>
+        <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Mission:</Typography>
+        <Typography variant="body2" sx={{ color: "#333" }}>Empowering underprivileged children through education and healthcare.</Typography>
+      </Box>
+    </ListItem>
+
+    {/* Team Size Card (Green) */}
+    <ListItem sx={{ mb: 2 }}>
+      <Box sx={{ 
+        width: "100%", 
+        padding: 2, 
+        backgroundColor: "#c8e6c9", 
+        borderRadius: 2, 
+        boxShadow: 2 }}>
+        <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Team Size:</Typography>
+        <Typography variant="body2" sx={{ color: "#333" }}>25 Members</Typography>
+      </Box>
+    </ListItem>
+
+    {/* Volunteer Needs Card (Yellow) */}
+    <ListItem sx={{ mb: 2 }}>
+      <Box sx={{ 
+        width: "100%", 
+        padding: 2, 
+        backgroundColor: "#fff9c4", 
+        borderRadius: 2, 
+        boxShadow: 2 }}>
+        <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Volunteer Needs:</Typography>
+        <List sx={{ paddingLeft: 2 }}>
+          <ListItem><Typography variant="body2" sx={{ color: "#333" }}>- Teaching & Mentorship</Typography></ListItem>
+          <ListItem><Typography variant="body2" sx={{ color: "#333" }}>- Event Planning & Coordination</Typography></ListItem>
+          <ListItem><Typography variant="body2" sx={{ color: "#333" }}>- Fundraising & Grant Writing</Typography></ListItem>
+        </List>
+      </Box>
+    </ListItem>
+
+    {/* Verified NGO Card (Green) */}
+    <ListItem sx={{ mb: 2 }}>
+      <Box sx={{ 
+        width: "100%", 
+        padding: 2, 
+        backgroundColor: "#c8e6c9", 
+        borderRadius: 2, 
+        boxShadow: 2 }}>
+        <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Verified ?:</Typography>
+        <Typography variant="body2" sx={{ color: "#333" }}>✅ Yes</Typography>
+      </Box>
+    </ListItem>
+  </List>
+
+  {/* Update Profile Button */}
+  <Button 
+    variant="contained" 
+    color="primary" 
+    fullWidth 
+    sx={{ marginTop: 2, borderRadius: 2, paddingY: 1 }}>
+    Update Profile
+  </Button>
+</Drawer>
+
+
       </Container>
       
       {/* Footer */}
@@ -80,3 +141,4 @@ function NGOWrapper() {
 }
 
 export default NGOWrapper;
+
