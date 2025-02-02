@@ -5,7 +5,7 @@ import Recommendation from "./Recommendation";
 import ImpactDash from "./ImpactDash";
 import AllJobs from "./AllJobs";
 import Feature from "./Feature";
-import { Drawer, Typography, List, ListItem, ListItemText, Button } from "@mui/material";
+import { Drawer, Typography, List, ListItem, ListItemText, Button, Box } from "@mui/material";
 import "./dashboard.css";
 
 const Dashboard = () => {
@@ -32,38 +32,110 @@ const Dashboard = () => {
         anchor="right" 
         open={isSidebarOpen} 
         onClose={toggleSidebar} 
-        PaperProps={{ sx: { width: 300, padding: 2 } }}>
+        PaperProps={{
+          sx: {
+            width: 350,
+            padding: 3,
+            backgroundColor: "#f5f5f5",
+            borderRadius: "10px",
+            boxShadow: 3,
+          },
+        }}>
         
-        <Typography variant="h6" sx={{ fontWeight: "bold", marginBottom: 2 }}>
-          Volunteer Profile
-        </Typography>
-        
+        <Box sx={{ textAlign: "center", marginBottom: 3 }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold", color: "#333", mb: 2 }}>
+            Volunteer Profile
+          </Typography>
+          <Typography variant="body2" sx={{ fontStyle: "italic", color: "#666" }}>
+            John Doe
+          </Typography>
+        </Box>
+
         <List>
-          <ListItem>
-            <ListItemText primary="Name: John Doe" />
+          {/* Name Card (Green) */}
+          <ListItem sx={{ mb: 2 }}>
+            <Box sx={{ 
+              width: "100%", 
+              padding: 2, 
+              backgroundColor: "#c8e6c9", 
+              borderRadius: 2, 
+              boxShadow: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Name:</Typography>
+              <Typography variant="body2" sx={{ color: "#333" }}>John Doe</Typography>
+            </Box>
           </ListItem>
-          <ListItem>
-            <ListItemText primary="Current Location: New York, USA" />
+
+          {/* Location Card (Yellow) */}
+          <ListItem sx={{ mb: 2 }}>
+            <Box sx={{ 
+              width: "100%", 
+              padding: 2, 
+              backgroundColor: "#fff9c4", 
+              borderRadius: 2, 
+              boxShadow: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Current Location:</Typography>
+              <Typography variant="body2" sx={{ color: "#333" }}>New York, USA</Typography>
+            </Box>
           </ListItem>
-          <ListItem>
-            <ListItemText primary="Skills: Graphic Designing, Canva" />
+
+          {/* Skills Card (Green) */}
+          <ListItem sx={{ mb: 2 }}>
+            <Box sx={{ 
+              width: "100%", 
+              padding: 2, 
+              backgroundColor: "#c8e6c9", 
+              borderRadius: 2, 
+              boxShadow: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Skills:</Typography>
+              <Typography variant="body2" sx={{ color: "#333" }}>Teaching, Fundraising, Event Management</Typography>
+            </Box>
           </ListItem>
-          <ListItem>
-            <ListItemText primary="Preferred Volunteering: Offline" />
+
+          {/* Preferred Volunteering Card (Yellow) */}
+          <ListItem sx={{ mb: 2 }}>
+            <Box sx={{ 
+              width: "100%", 
+              padding: 2, 
+              backgroundColor: "#fff9c4", 
+              borderRadius: 2, 
+              boxShadow: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Preferred Volunteering:</Typography>
+              <Typography variant="body2" sx={{ color: "#333" }}>Offline</Typography>
+            </Box>
           </ListItem>
-          <ListItem>
-            <ListItemText primary="Hours Contributed: 0 Hours" />
+
+          {/* Hours Contributed Card (Green) */}
+          <ListItem sx={{ mb: 2 }}>
+            <Box sx={{ 
+              width: "100%", 
+              padding: 2, 
+              backgroundColor: "#c8e6c9", 
+              borderRadius: 2, 
+              boxShadow: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Hours Contributed:</Typography>
+              <Typography variant="body2" sx={{ color: "#333" }}>50 Hours</Typography>
+            </Box>
           </ListItem>
-          <ListItem>
-            <ListItemText primary="Verified Volunteer: ✅ Yes" />
+
+          {/* Verified Volunteer Card (Yellow) */}
+          <ListItem sx={{ mb: 2 }}>
+            <Box sx={{ 
+              width: "100%", 
+              padding: 2, 
+              backgroundColor: "#fff9c4", 
+              borderRadius: 2, 
+              boxShadow: 2 }}>
+              <Typography variant="body1" sx={{ fontWeight: "bold", color: "#555" }}>Verified Volunteer:</Typography>
+              <Typography variant="body2" sx={{ color: "#333" }}>✅ Yes</Typography>
+            </Box>
           </ListItem>
         </List>
-        
+
         <Button 
           variant="contained" 
           color="primary" 
           fullWidth 
-          sx={{ marginTop: 2 }}>
+          sx={{ marginTop: 2, borderRadius: 2, paddingY: 1 }}>
           Update Profile
         </Button>
       </Drawer>
