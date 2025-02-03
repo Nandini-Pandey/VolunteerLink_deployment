@@ -231,61 +231,78 @@ const LandingPage = () => {
       </Element>
 
       {/* FAQs Section */}
-      <Element name="faqs">
-        <Box
-          sx={{
-            py: 8,
-            px: 4,
-            backgroundColor: "#e9ecef",
-            textAlign: "center",
-            width: "100%",
-          }}
-        >
-          <Container maxWidth="lg">
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              gutterBottom
-              sx={{ color: "#1E2A38" }}
-            >
-              Frequently Asked Questions
-            </Typography>
-            <Box sx={{ maxWidth: "800px", mx: "auto", mt: 4 }}>
-              {[
-                {
-                  question: "What is VolunteerLink?",
-                  answer:
-                    "VolunteerLink is a platform that connects volunteers and NGOs for meaningful contributions to social causes.",
-                },
-                {
-                  question: "How do I sign up?",
-                  answer:
-                    "You can sign up by creating an account and selecting your skills and availability.",
-                },
-                {
-                  question: "Are NGOs verified?",
-                 answer: (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `Yes, all NGOs on VolunteerLink are verified by cross-checking their credentials with the NGO Darpan portal, which is managed by the Ministry of Electronics and Information Technology (MeitY) to ensure authenticity and compliance with government regulations. For further verification, you can visit the official <a href="https://ngodarpan.gov.in/index.php/home/statewise_ngo/4370/7/16">NGO Darpan directory</a>.`,
-      }}
-    />
-  ),
-                },
-              ].map((faq, index) => (
-                <Accordion key={index}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography variant="h6">{faq.question}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>{faq.answer}</Typography>
-                  </AccordionDetails>
-                </Accordion>
-              ))}
-            </Box>
-          </Container>
-        </Box>
-      </Element>
+    
+<Element name="faqs">
+  <Box
+    sx={{
+      py: 8,
+      px: 4,
+      backgroundColor: "#e9ecef",
+      textAlign: "center",
+      width: "100%",
+    }}
+  >
+    <Container maxWidth="lg">
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        gutterBottom
+        sx={{ color: "#1E2A38" }}
+      >
+        Frequently Asked Questions
+      </Typography>
+      <Box sx={{ maxWidth: "800px", mx: "auto", mt: 4 }}>
+        {[
+          {
+            question: "What is VolunteerLink?",
+            answer:
+              "VolunteerLink is a platform that connects volunteers and NGOs for meaningful contributions to social causes.",
+          },
+          {
+            question: "How do I sign up?",
+            answer:
+              "You can sign up by creating an account and selecting your skills and availability.",
+          },
+          {
+            question: "Are NGOs verified?",
+            answer: (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `Yes, all NGOs on VolunteerLink are verified by cross-checking their credentials with the NGO Darpan portal, which is managed by the Ministry of Electronics and Information Technology (MeitY) to ensure authenticity and compliance with government regulations. For further verification, you can visit the official <a href="https://ngodarpan.gov.in/index.php/home/statewise_ngo/4370/7/16" target="_blank" rel="noopener noreferrer">NGO Darpan directory</a>.`,
+                }}
+              />
+            ),
+          },
+          {
+            question: "What is VolunteerLink's future vision for onboarding corporates for CSR initiatives?",
+            answer: (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `VolunteerLink aims to become the go-to platform for corporate social responsibility (CSR) initiatives by partnering with companies to facilitate employee volunteering. We provide a structured ecosystem where corporates can:<br/><br/>
+                  ✅ Enroll employees in meaningful volunteering projects aligned with their CSR goals.<br/>
+                  ✅ Access impact-driven analytics to track contributions and engagement.<br/>
+                  ✅ Collaborate with verified NGOs to ensure transparency and authenticity.<br/>
+                  ✅ Use AI-powered recommendations to match employees with relevant causes based on their skills and interests.<br/><br/>
+                  By streamlining corporate volunteering, we aim to bridge the gap between **corporate resources and community needs**, making CSR more effective and measurable.`,
+                }}
+              />
+            ),
+          },
+        ].map((faq, index) => (
+          <Accordion key={index}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography variant="h6">{faq.question}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>{faq.answer}</Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </Box>
+    </Container>
+  </Box>
+</Element>
+
 
       {/* Footer */}
       <Element name="contact">
